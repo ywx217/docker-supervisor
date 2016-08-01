@@ -1,0 +1,1 @@
+具有sshd和supervisord的debian系统，默认supervisor http端口为9001，ssh端口为22
