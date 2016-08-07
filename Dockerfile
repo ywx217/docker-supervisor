@@ -30,6 +30,8 @@ EXPOSE 9001
 # supervisor base configuration
 ADD supervisor.conf /etc/supervisor.conf
 ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
+ADD entrypoint.sh /entrypoint.sh
 
 # default command
-CMD ["supervisord", "-c", "/etc/supervisor.conf"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["-c", "/etc/supervisor.conf"]
